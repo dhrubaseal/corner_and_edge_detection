@@ -9,13 +9,13 @@ from collections import defaultdict
 class RoomCornerParams:
     """Parameters for room corner detection with noise reduction"""
     # Edge detection parameters
-    canny_low: int = 100  # Increased from 50
-    canny_high: int = 200  # Increased from 150
+    canny_low: int = 80  # Increased from 50
+    canny_high: int = 150  # Increased from 150
     blur_kernel_size: Tuple[int, int] = (7, 7)  # Increased blur for noise reduction
     
     # Line detection parameters
-    hough_threshold: int = 80  # Increased from 50
-    min_line_length: int = 120  # Increased from 100
+    hough_threshold: int = 60  # Increased from 50
+    min_line_length: int = 100  # Increased from 100
     max_line_gap: int = 5  # Reduced from 10
     
     # Corner detection parameters
@@ -28,7 +28,7 @@ class RoomCornerParams:
     frame_height: int = 480
     
     # Advanced parameters
-    line_cluster_threshold: float = 0.08  # Reduced for stricter clustering
+    line_cluster_threshold: float = 0.1  # Reduced for stricter clustering
     min_line_strength: int = 50  # Increased minimum line strength
     temporal_persistence: int = 5  # Frames a corner must persist
     confidence_threshold: float = 3.0  # Minimum confidence for corner display

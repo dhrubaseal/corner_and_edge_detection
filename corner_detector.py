@@ -14,8 +14,8 @@ class RoomCornerParams:
     blur_kernel_size: Tuple[int, int] = (7, 7)  # Increased blur for noise reduction
     
     # Line detection parameters
-    hough_threshold: int = 60  # Increased from 50
-    min_line_length: int = 100  # Increased from 100
+    hough_threshold: int = 100  # Increased from 50
+    min_line_length: int = 200  # Increased from 100
     max_line_gap: int = 5  # Reduced from 10
     
     # Corner detection parameters
